@@ -1,0 +1,11 @@
+---
+ - hosts: one.example.com
+   user: root
+   tasks:
+    - name: copy repo file
+      copy: src=files/ser.repo dest=/etc/yum.repos.d/ser.repo
+    - name: installing httpd
+      action: yum name=httpd state=installed
+    - name: copy index.html
+      copy: src=files/index.html dest=/var/www/html/index.html
+      
