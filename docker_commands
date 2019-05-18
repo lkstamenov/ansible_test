@@ -1,1 +1,7 @@
+# Docker commands
+
 docker run -d  --name ssh.1 -p 2020:22 jdeathe/centos-ssh:latest
+
+# Ansible commands
+
+ansible-playbook -v one.example.com apache.yml --step
