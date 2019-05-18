@@ -1,0 +1,10 @@
+---
+ - hosts: one.example.com
+   user: root
+   vars:
+    motd_welcome: 'Welcome to Ansible'
+   tasks:
+   - name: sample motd
+     copy:
+      dest: /etc/motd
+      content: "{{ motd_welcome }}"
